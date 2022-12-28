@@ -1,0 +1,39 @@
+:root {
+    --color-black: rgb(0, 0, 0);
+    --color-teste: rgb(14, 14, 14);
+    --color-text: rgb(160, 160, 160);
+    --colors-text-Nav: rgb(89, 89, 91);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-black);
+}
+
+.menu {
+    background-color: var(--color-teste);
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    color: var(--colors-text-Nav);
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 1.25rem;
+    display: inline-block;
+    
+}
