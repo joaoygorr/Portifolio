@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
+
+.box-navigation {
+    padding: 1rem 0;
+    border: 1px solid;
+
+    .box-navigation-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-transform: capitalize;
+
+        li {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.box-container {
+    .box-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Belanosima", sans-serif;
+        background: radial-gradient(circle, rgba(40, 36, 43, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        color: #ffffff;
+
+        .box-home-content {
+            .box-introduction {
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1.3rem;
+            }
+
+            .box-stack-tech {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 1rem;
+                font-size: 8rem;
+                text-transform: uppercase;
+                font-weight: 600;
+
+                .box-icons {
+                    display: flex;
+                    justify-content: center;
+
+                    ul {
+                        display: flex;
+                        gap: 1rem;
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            transition: .5s;
+
+                            a {
+                                text-decoration: none;
+                                color: #fef3b7;
+                                font-size: 2.6rem;
+                                transition: .5s;
+                            }
+                        }
+
+                        li:hover {
+                            transform: translateY(-1.5rem);
+
+                            .bi-linkedin {
+                                color: #0a66c2;
+                            }
+
+                            .bi-github {
+                                color: #e6edf3;
+                            }
+
+                            .bi-envelope-at {
+                                color: #ca4337;
+                            }
+
+                            .bi-file-earmark-text-fill {
+                                color: #fffeff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .box-role {
+                h1 {
+                    text-transform: uppercase;
+                    font-size: 8rem;
+                    font-weight: 600;
+                }
+
+                .box-my-resume {
+                    display: flex;
+                    justify-content: end;
+                    width: 73%;
+
+                    .box-text {
+                        display: inline-block;
+                        text-align: justify;
+                        width: 60%;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
