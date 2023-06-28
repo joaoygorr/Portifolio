@@ -10,7 +10,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: green;
+        background-color: #1b7850;
         border-radius: 50%;
         width: 3rem;
         height: 3rem;
@@ -40,15 +40,11 @@
 
             li {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: blue;
+                background-color: #104e5a;
                 border-radius: 50%;
-                width: 3rem;
-                height: 3rem;
                 position: absolute;
                 transition: all .3s ease-in-out;
-
+                cursor: pointer;
 
                 &:hover {
                     scale: 1.1;
@@ -56,15 +52,20 @@
                 }
 
                 a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 3rem;
+                    height: 3rem;
                     color: white;
                 }
             }
 
-            &.active > .box-subHouse {
+            &.active>.box-subHouse {
                 transform: translate(-4.5rem, 0rem);
             }
 
-            &.active > .box-subFill {
+            &.active>.box-subFill {
                 transform: translate(0, -4.5rem);
             }
         }
@@ -162,5 +163,15 @@
                 }
             }
         }
+    }
+
+    .box-project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(0deg, rgba(185, 175, 145, 1) 0%, rgba(210, 191, 233, 1) 100%);
+
+
     }
 }
