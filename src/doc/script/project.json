@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Projeto 1",
+        "img": "./src/doc/img/theMovie.png",
+        "description": "Descrição do projeto 1",
+        "tecnologic": ["Tecnologia A", "Tecnologia B"]
+    },
+    {
+        "title": "Projeto 2",
+        "img": "./src/doc/img/theMovie.png",
+        "description": "Descrição do projeto 2",
+        "tecnologic": ["Tecnologia C", "Tecnologia D"]
+    },
+    {
+        "title": "Projeto 3",
+        "img": "./src/doc/img/theMovie.png",
+        "description": "Descrição do projeto 3",
+        "tecnologic": ["Tecnologia E", "Tecnologia F"]
+    },
+    {
+        "title": "Projeto 4",
+        "img": "./src/doc/img/theMovie.png",
+        "description": "Descrição do projeto 4",
+        "tecnologic": ["Tecnologia G", "Tecnologia H"]
+    },
+    {
+        "title": "Projeto 5",
+        "img": "./src/doc/img/theMovie.png",
+        "description": "Descrição do projeto 5",
+        "tecnologic": ["Tecnologia I", "Tecnologia J"]
+    },
+    {
+        "title": "Projeto 6",
+        "img": "./src/doc/img/theMovie.png",
+        "description": "Descrição do projeto 6",
+        "tecnologic": ["Tecnologia K", "Tecnologia L"]
+    }
+]
