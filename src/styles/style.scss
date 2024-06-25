@@ -3,7 +3,7 @@
 .box-header {
     position: fixed;
     top: 50%;
-    right: 5rem;
+    right: 1rem;
     transform: translateY(-50%);
 
     .box-circle-menu {
@@ -175,19 +175,28 @@
         .box-project-content {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
             gap: 10px;
 
-            .project {
+            .project-body {
                 border-radius: .6rem;
                 background: #0006;
+                text-align: center;
+                width: 70%;
+                padding: 1rem;
+                margin-bottom: 5rem;
+                
+                h3 {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin: 1rem 0;
+                }
 
-                .project-body {
-                    text-align: center;
-
-                    h3 {
-                        font-size: 1.3rem;
-                        font-weight: 500;
-                        text-transform: uppercase;
+                .img {
+                    img {
+                        width: 80%;
+                        border-radius: .6rem;
                     }
                 }
             }
