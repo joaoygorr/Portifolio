@@ -172,6 +172,25 @@
         height: 100vh;
         background: linear-gradient(0deg, rgba(185, 175, 145, 1) 0%, rgba(210, 191, 233, 1) 100%);
 
+        .box-project-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
 
+            .project {
+                border-radius: .6rem;
+                background: #0006;
+
+                .project-body {
+                    text-align: center;
+
+                    h3 {
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
     }
 }
