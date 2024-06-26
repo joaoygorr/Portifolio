@@ -31,18 +31,25 @@ function generateBox(project: IProject) {
     const box = document.querySelector(".box-project-content");
     box!.innerHTML += `
     <div class="project-body">
-        <h3>${project.title}</h3>
+        <h3>
+            <a  
+                href=${project.linkProject}
+                target="_blank"
+                rel="noopener noreferrer">
+                ${project.title}
+            </a>
+        </h3>
 
         <div class="img">
-            <img src=${project.img} />
+            <img src=${project.img} alt="imagem projeto"/>
         </div>
 
-        <div>
+        <div class="description">
             <p>${project.description}</p>
         </div>
         
-        <div>
-            <span>${project.tecnologic}</span>
+        <div class="tech">
+            <span>${project.tecnologic.join(" - ")}</span>
         </div>
     </div>
     `;
