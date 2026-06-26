@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 .box-header {
     position: fixed;
     top: 50%;
     right: 1%;
     transform: translateY(-50%);
+    z-index: 100;
 
     .box-circle-menu {
         display: flex;
@@ -17,7 +19,7 @@
         position: relative;
         z-index: 1;
         cursor: pointer;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
         border: none;
         outline: none;
 
@@ -76,9 +78,10 @@
 }
 
 .box-container {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     height: 100vh;
+    scroll-behavior: smooth;
 
     .box-home {
         scroll-snap-align: start;
@@ -89,17 +92,6 @@
         font-family: "Belanosima", sans-serif;
         position: relative;
         background: radial-gradient(circle, rgba(40, 36, 43, 1) 0%, rgba(0, 0, 0, 1) 100%);
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 120px;
-            background: linear-gradient(to bottom, transparent, rgba(210, 191, 233, 0.3));
-            pointer-events: none;
-        }
         color: #ffffff;
 
         .box-home-content {
@@ -191,8 +183,8 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        font-family: "Belanosima", sans-serif;
-        background: linear-gradient(0deg, rgba(185, 175, 145, 1) 0%, rgba(210, 191, 233, 1) 70%, rgba(60, 50, 70, 1) 100%);
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(180deg, rgba(160, 140, 180, 1) 0%, rgba(210, 191, 233, 1) 30%, rgba(185, 175, 145, 1) 100%);
 
         .box-project-content {
             display: grid;
@@ -235,15 +227,17 @@
 
                 .description {
                     text-align: justify;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                     margin: 1rem 0;
+                    font-weight: 400;
+                    line-height: 1.5;
                 }
 
                 .tech {
                     span {
                         font-style: italic;
-                        font-size: 1rem;
-                        font-weight: 400;
+                        font-size: 0.9rem;
+                        font-weight: 500;
                     }
                 }
             }
