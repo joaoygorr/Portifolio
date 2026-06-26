@@ -17,6 +17,9 @@
         position: relative;
         z-index: 1;
         cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+        border: none;
+        outline: none;
 
         i {
             color: black;
@@ -73,13 +76,30 @@
 }
 
 .box-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+
     .box-home {
+        scroll-snap-align: start;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
         font-family: "Belanosima", sans-serif;
+        position: relative;
         background: radial-gradient(circle, rgba(40, 36, 43, 1) 0%, rgba(0, 0, 0, 1) 100%);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(to bottom, transparent, rgba(210, 191, 233, 0.3));
+            pointer-events: none;
+        }
         color: #ffffff;
 
         .box-home-content {
@@ -166,12 +186,13 @@
     }
 
     .box-project {
+        scroll-snap-align: start;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
         font-family: "Belanosima", sans-serif;
-        background: linear-gradient(0deg, rgba(185, 175, 145, 1) 0%, rgba(210, 191, 233, 1) 100%);
+        background: linear-gradient(0deg, rgba(185, 175, 145, 1) 0%, rgba(210, 191, 233, 1) 70%, rgba(60, 50, 70, 1) 100%);
 
         .box-project-content {
             display: grid;
