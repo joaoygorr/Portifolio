@@ -4,6 +4,6 @@
         "img": "./src/doc/img/theMovie.png",
         "description": "Aplicação Web para descoberta de filmes e séries, consumindo a API do TMDB. Permite navegar por categorias (em cartaz, populares, melhgorem avaliados), visualizar detalhes completos com elenco, trailers e imagens, além de suportar troca de idioma.",
         "tecnologic": ["Next.js", "React", "TypeScript", "TailwindCSS", "Zod", "i18next", "Rest API"],
-        "linkProject": "https://the-movie-nu.vercel.app/movie"
+        "linkProject": "https://movies-azure-omega.vercel.app/movie"
     }
 ]
