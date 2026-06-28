@@ -1,7 +1,8 @@
 interface IProject {
-    title: string, 
+    title: string,
     img: string,
-    description: string, 
+    description: string,
     tecnologic: string[],
-    linkProject: string
+    linkProject: string,
+    vercel: string
 }
