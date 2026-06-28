@@ -36,10 +36,6 @@ function generateBox(project: IProject) {
             </a>
         </h3>
 
-        <div class="img">
-            <img src=${project.img} alt="imagem projeto"/>
-        </div>
-
         <div class="description">
             <p>${project.description}</p>
         </div>
@@ -47,6 +43,11 @@ function generateBox(project: IProject) {
         <div class="tech">
             <span>${project.tecnologic.join(" - ")}</span>
         </div>
+
+        <div class="links">
+            <i class="bi bi-github"></i>
+            <i class="bi bi-link-45deg"></i>
+        <div>
     </div>
     `;
 }
