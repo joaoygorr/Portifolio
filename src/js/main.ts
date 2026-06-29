@@ -1,16 +1,21 @@
-const circle: HTMLDivElement = document.querySelector(".box-circle-menu")!;
-const boxNavigationList: HTMLUListElement = document.querySelector(".box-navigation-list")!;
-const iconHouse: HTMLElement = document.querySelector(".bi-list")!;
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import type { IProject } from './interface/IProject';
 
-circle!.onclick = () => {
-    boxNavigationList?.classList.toggle("active");
+const circle = document.querySelector<HTMLButtonElement>(".box-circle-menu")!;
+const boxNavigationList = document.querySelector<HTMLUListElement>(".box-navigation-list")!;
+const iconHouse = document.querySelector<HTMLElement>(".bi-list")!;
+
+circle.addEventListener("click", () => {
+    boxNavigationList.classList.toggle("active");
     iconHouse.classList.toggle("bi-x");
-};
+});
 
 function generateBoxProject(data: IProject[]) {
-    data.map(project => {
-        generateBox(project);
-    })
+    const box = document.querySelector(".box-project-content");
+    if (!box) return;
+
+    const html = data.map(project => generateBox(project)).join("");
+    box.innerHTML = html;
 }
 
 function loadProject() {
@@ -18,18 +23,16 @@ function loadProject() {
         .then(response => response.json())
         .then(data => generateBoxProject(data))
         .catch(error => {
-            console.log(error);
+            console.error("Erro ao carregar projetos:", error);
         });
 }
 
-
-function generateBox(project: IProject) {
-    const box = document.querySelector(".box-project-content");
-    box!.innerHTML += `
+function generateBox(project: IProject): string {
+    return `
     <div class="project-body">
         <h3>
             <a  
-                href=${project.linkProject}
+                href="${project.vercel || project.linkProject}"
                 target="_blank"
                 rel="noopener noreferrer">
                 ${project.title}
@@ -45,9 +48,11 @@ function generateBox(project: IProject) {
         </div>
 
         <div class="links">
-            <i class="bi bi-github"></i>
-            <i class="bi bi-link-45deg"></i>
-        <div>
+            <a href="${project.linkProject}" target="_blank" rel="noopener noreferrer" aria-label="Repositório no GitHub" title="Ver código no GitHub">
+                <i class="bi bi-github"></i>
+            </a>
+            ${project.vercel ? `<a href="${project.vercel}" target="_blank" rel="noopener noreferrer" aria-label="Ver deploy" title="Ver projeto online"><i class="bi bi-box-arrow-up-right"></i></a>` : ''}
+        </div>
     </div>
     `;
 }

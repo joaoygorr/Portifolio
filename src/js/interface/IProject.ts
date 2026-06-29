@@ -1,8 +1,8 @@
-interface IProject {
+export interface IProject {
     title: string,
-    img: string,
+    img?: string,
     description: string,
     tecnologic: string[],
     linkProject: string,
-    vercel: string
+    vercel?: string
 }
