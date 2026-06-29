@@ -95,7 +95,6 @@
         color: #ffffff;
 
         .box-home-content {
-            padding: 0 2rem;
 
             .box-introduction {
                 text-transform: uppercase;
@@ -189,6 +188,22 @@
         font-family: "Inter", sans-serif;
         background: linear-gradient(180deg, rgba(160, 140, 180, 1) 0%, rgba(210, 191, 233, 1) 30%, rgba(185, 175, 145, 1) 100%);
 
+        .box-project-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .box-project-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         .box-project-content {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -202,8 +217,25 @@
                 flex-direction: column;
                 align-items: center;
                 width: 70%;
-                padding: 1rem;
+                padding: 1.5rem;
                 margin-bottom: 5rem;
+                transition: transform .3s ease, box-shadow .3s ease, opacity .6s ease;
+                opacity: 0;
+                transform: translateY(20px);
+
+                &.visible {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                &:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+                }
+
+                &.visible:hover {
+                    transform: translateY(-6px);
+                }
 
                 h3 {
                     font-size: 2rem;
@@ -260,6 +292,16 @@
             }
         }
     }
+}
+
+// Footer
+.box-footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
 }
 
 // Responsividade
