@@ -16,6 +16,22 @@ function generateBoxProject(data: IProject[]) {
 
     const html = data.map(project => generateBox(project)).join("");
     box.innerHTML = html;
+
+    observeProjectCards();
+}
+
+function observeProjectCards() {
+    const cards = document.querySelectorAll(".project-body");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
 }
 
 function loadProject() {
